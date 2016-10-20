@@ -3,6 +3,8 @@ package servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import classes.Usuario;
-import database.Operacao;
+import database.OperacaoOcorrencia;
 
 /**
  * Servlet implementation class RecebeDados
@@ -59,10 +61,10 @@ public class RecebeDados extends HttpServlet {
 			usuario.setNome(nome);
 			usuario.setEmail(email);
 			usuario.setSenha(senha);			
-			Operacao op = new Operacao();
+			OperacaoOcorrencia op = new OperacaoOcorrencia();
 			try {
-				op.adicionarUsuario(usuario);
-				imprime.write("Ok");
+				op.listaOcorrencias();				
+				imprime.write("ok");
 			} catch (InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException e) {
 				e.printStackTrace();
 				imprime.write("Erro"+e);

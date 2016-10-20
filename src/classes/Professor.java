@@ -8,13 +8,14 @@ public class Professor {
 	private String formacao;
 	private int siape;
 	private String senha;
-	private Coordenacao coordenacao = new Coordenacao();
+	private String funcao;
 	
-	public Coordenacao getCoordenacao() {
-		return coordenacao;
+	
+	public String getFuncao() {
+		return funcao;
 	}
-	public void setCoordenacao(Coordenacao coordenacao) {
-		this.coordenacao = coordenacao;
+	public void setFuncao(String funcao) {
+		this.funcao = funcao;
 	}
 	public int getCodigo() {	
 		return codigo;
