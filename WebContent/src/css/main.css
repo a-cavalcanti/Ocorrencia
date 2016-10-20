@@ -250,7 +250,10 @@ header{
 .side-body {
   margin-left: 310px;
 }
-
+label{
+  margin-bottom: 10px;
+  color: #0F3B27;
+}
 
 
 @media (min-width: 1200px){
