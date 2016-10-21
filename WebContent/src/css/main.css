@@ -296,6 +296,58 @@ display: inline-block;
   text-transform: uppercase;
   border:none;
 }
+.table-ops{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 10px;
+}
+.table-ops.excluir{
+  background-color: #777779;
+}
+.table-ops.adicionar{
+  background-color: #11EB6C;
+}
+.table-ops.add{
+  background-color: #007AED;
+}
+.table-ops.ativar{
+  background-color: #007AED;
+}
+.table-ops.desativar{
+  background-color: #FACF30;
+}
+#exclusao{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #E6E7E8;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  display: none;
+}
+#exclusao h3{
+  text-transform: uppercase;
+  color: #797979;
+  padding-bottom: 10px;
+}
+#exclusao h3 span{
+  font-weight: bold;
+}
+.ops a{
+  text-decoration: none;
+  cursor: pointer;
+}
+.ops a:hover{
+  text-decoration: none;
+  cursor: pointer;
+}
+.ajax-html{
+  text-align: center;
+  font-size: 12px;
+}
 
 
 @media (min-width: 1200px){

@@ -1,4 +1,4 @@
-console.log("Zabum Framework");
+
 
 ApplicationLoad = {
   init: function () {
@@ -14,4 +14,42 @@ ApplicationLoad = {
 
 }
 
-$(document).ready( function () { ApplicationLoad.init(); });
+$(document).ready( function () { 
+
+	carregar();
+
+	function carregar(){
+			$('#listaUsuarios').load("Connection");
+		}
+
+		jQuery('#form-excluir').submit(function(){
+			loadIn();
+			var dados = jQuery(this).serialize();
+			jQuery.ajax({
+				type: "POST",
+				url: "inc/modules/module-empresa/deletar.php",
+				data: dados,
+				success: function(data)
+				{	
+					carregar();
+					$('#exclusao').fadeOut(10);
+					$('#form-excluir').each(function(){
+  					this.reset();
+					});
+					loadOut();
+					mensagem(data);
+
+					
+				}
+			});
+			
+			return false;
+		});
+
+
+
+
+	ApplicationLoad.init(); 
+
+
+});

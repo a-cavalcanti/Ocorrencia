@@ -1,5 +1,5 @@
 <div class="header-conteudo">
-		<h2>UsuÃ¡rios </h2>
+		<h2>Usuários </h2>
 	</div>
 <div class="conteudo">
 	
@@ -19,13 +19,13 @@
 	<table class="table table-hover table-striped"> 
 		<thead class="tabela-fotos"> 
 			<tr> 
-				<th>CÃ³digo</th> 
+				<th>Código</th> 
 				<th>Nome</th> 
 				<th>E-mail</th> 
-				<th>OpÃ§Ãµes</th> 
+				<th>Opções</th> 
 			</tr> 
 		</thead> 
-		<tbody id='desativadas' class="tabela-fotos"> 
+		<tbody id='listaUsuarios' class="tabela-fotos"> 
 			 <tr> 
 				<th scope="row"><?=$lista[$i]['id']?></th> 
 				<td><?=$lista[$i]['nome']?></td> 

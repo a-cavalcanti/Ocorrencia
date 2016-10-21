@@ -10,13 +10,13 @@
 <title>IFPE - Instituto Federal de Pernambuco - Campus Garanhuns - Sistema de Ocorrências</title>
 </head>
 <body>
-	<%@include file="header.jsp" %>
+	<%@include file="includes/header.jsp" %>
 	
 	<section class="section-body main">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3">
-					<%@include file="aside.jsp" %>
+					<%@include file="includes/aside.jsp" %>
 				</div>
 				<div class="col-sm-9">
 					<%
@@ -29,12 +29,17 @@
 						if(section.equals("usuarios")){
 							if(operacao.equals("cadastrar")){
 								%>
-								<%@include file="cadastroUsuario.jsp" %>
+								<%@include file="includes/cadastroUsuario.jsp" %>
+								<%
+							}
+							if(operacao.equals("gerenciar")){
+								%>
+								<%@include file="includes/gerenciarUsuarios.jsp" %>
 								<%
 							}
 						}
 						}else{%>
-						<%@include file="home.jsp" %>
+						<%@include file="includes/home.jsp" %>
 						<%} %>
 				</div>
 			</div>
@@ -42,7 +47,7 @@
 	</section>
 	
 	
-	<%@include file="footer.jsp" %>
+	<%@include file="includes/footer.jsp" %>
 
 
 
